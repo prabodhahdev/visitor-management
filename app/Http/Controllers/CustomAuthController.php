@@ -12,17 +12,17 @@ class CustomAuthController extends Controller
 {
     //
 
-    public function index()
+    /*public function index()
     {
         return view('auth.login');
-    }
+    }*/
 
 
     public function registration()
     {
         return view('auth.register');
     }
-
+}/*
     public function custom_login(Request $request){
         $request->validate([
              'email'=>'required',
@@ -70,3 +70,4 @@ class CustomAuthController extends Controller
 
 
 }
+*/
