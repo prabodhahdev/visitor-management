@@ -12,22 +12,42 @@ class CustomAuthController extends Controller
 {
     //
 
-    /*public function index()
+    public function index()
     {
         return view('auth.login');
-    }*/
+    }
 
 
     public function registration()
     {
         return view('auth.register');
     }
-}/*
-    public function custom_login(Request $request){
+
+    public function custom_registration(Request $request){
+         $request->validate([
+            'name'=>'required',
+            'email'=>'required|email|unique:users',
+            'password'=>'required|min:6'
+        ]);
+            
+        $data = $request->all();
+        
+        User::create([
+            'name' => $data['name'],
+            'email' => $data['email'],
+            'password' => Hash::make($data['password']),
+            'type' => 'Admin',
+        ]);
+
+        return redirect('register')->with('success',"Registration Complete");
+    }
+
+     public function custom_login(Request $request){
         $request->validate([
-             'email'=>'required',
+            'email'=>'required',
             'password'=>'required'
         ]);
+        
         $credentials = $request->only('email','password');
         if(Auth::attempt($credentials)){
             return redirect()->intended('dashboard')->withSuccess('login'); 
@@ -35,25 +55,7 @@ class CustomAuthController extends Controller
         return redirect('login')->with('error',"Login details are incorrect");
     }
 
-    public function custom_registration(Request $request){
-        $request->validate([
-            'name'=>'required',
-            'email'=>'required|email|unique:users',
-            'password'=>'required|min:6'
-        ]);
-
-        $data = $request->all();
-        User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-            'type' => 'Admin',
-        ]);
-        return redirect('register')->with('success',"Registration Complete");
-        }
-
-
-        public function dashboard(){
+         public function dashboard(){
             
             if(Auth::check()){
                 return view('dashboard');
@@ -68,6 +70,4 @@ class CustomAuthController extends Controller
         }
 
 
-
 }
-*/
