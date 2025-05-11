@@ -35,9 +35,9 @@
 <button type='submit' class='btn btn-dark btn-block'>Login</button>
 </div>
 <br>
-<!-- <div class="text-center">
-<p>Admin? <a href="{{route('login')}}">Register</a></p>
-</div> -->
+ <div class="text-center">
+<p>Admin? <a href="{{route('register')}}">Register</a></p>
+</div>
 
 
             </form>

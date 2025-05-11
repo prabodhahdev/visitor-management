@@ -36,3 +36,12 @@ Route::post('department/add-validation', [App\Http\Controllers\DepartmentControl
 Route::get('department/edit/{id}', [App\Http\Controllers\DepartmentController  ::class, 'edit'])->name('edit');
 Route::get('department/delete/{id}', [App\Http\Controllers\DepartmentController  ::class, 'delete'])->name('delete');
 Route::post('department/edit-validation', [App\Http\Controllers\DepartmentController::class, 'edit_validation'])->name('department.edit_validation');
+
+
+Route::get('visitor', [App\Http\Controllers\VisitorController  ::class, 'Index'])->name('visitor');
+Route::get('visitor/fetchall', [App\Http\Controllers\VisitorController  ::class, 'fetch_all'])->name('visitor.fetchall');
+Route::get('visitor/add', [App\Http\Controllers\VisitorController  ::class, 'add'])->name('visitor.add');
+Route::post('visitor/add-validation', [App\Http\Controllers\VisitorController  ::class, 'add_validation'])->name('visitor.add_validation');
+Route::get('visitor/edit/{id}', [App\Http\Controllers\VisitorController  ::class, 'edit'])->name('edit');
+Route::get('visitor/delete/{id}', [App\Http\Controllers\VisitorController  ::class, 'delete'])->name('delete');
+Route::post('visitor/edit-validation', [App\Http\Controllers\VisitorController::class, 'edit_validation'])->name('visitor.edit_validation');

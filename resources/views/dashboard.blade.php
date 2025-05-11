@@ -36,7 +36,7 @@
                     <ul class="nav flex-column">
                             @if(Auth::user()->type == 'Admin')
                         <li class="nav-item">
-                            <a class="nav-link" href="/receptionist">Receptionist</a>
+                            <a class="nav-link" href="/receptionist">Receptionists</a>
                         </li>
 
                          <li class="nav-item">
@@ -44,6 +44,11 @@
                         </li>
 
                          @endif
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/visitor">Visitors</a>
+                        </li>
+
 
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('profile') }}">Profile</a>
