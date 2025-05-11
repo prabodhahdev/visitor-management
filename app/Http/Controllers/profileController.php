@@ -43,7 +43,7 @@ class profileController extends Controller
             ];
         }
 
-        User::whereId(Auth::user()->id)->update($form_data);
+        User::whereId(data[ 'hidden_id'])->update($form_data);
         return redirect('profile')->with('success', "Profile Updated");
     }
 

@@ -38,6 +38,11 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/receptionist">Receptionist</a>
                         </li>
+
+                         <li class="nav-item">
+                            <a class="nav-link" href="/department">Departments</a>
+                        </li>
+
                          @endif
 
                         <li class="nav-item">
