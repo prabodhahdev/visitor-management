@@ -49,5 +49,64 @@ Visitx is a web-based Visitor Management System developed using **PHP Laravel**.
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/visitx.git
-   cd visitx
+     git clone https://github.com/prabodhahdev/visitor-management
+   cd visitor-management
+2. **Install dependencies using Composer:**
+   ```bash
+     composer install
+
+3. **Set up environment variables:
+Copy .env.example to .env and configure your database settings:**
+   ```bash
+     cp .env.example .env
+
+4. **Generate the application key:**
+   ```bash
+   php artisan key:generate
+
+5. **Run the migrations to set up the database tables:**
+   ```bash
+   php artisan migrate
+
+6. **Start the Laravel development server:**
+   ```bash
+   php artisan serve
+
+7. **Start the Laravel development server:**
+    ```bash
+   Open your browser and go to http://127.0.0.1:8000.
+
+## 👨‍💼 Usage
+
+### 🔐 Admin Features
+
+Admins can log in to the admin panel using their credentials. Once logged in, they have full control over the system:
+
+- **Manage Receptionists**  
+  Add, edit, and delete receptionist accounts who will handle visitor data.
+
+- **Manage Departments**  
+  Create and update department details within the organization.
+
+- **Manage Visitors**  
+  View, add, edit, and track visitor details, including who they are visiting, the reason for the visit, and timestamps for entry and exit.
+
+---
+
+### 🧑‍💼 Receptionist Features
+
+Receptionists can log in using their registered email and password. Once logged in, they can perform the following operations:
+
+- **Add Visitors**  
+  Record visitor information such as name, contact details, department to visit, reason for visit, time of arrival, etc.
+
+- **Edit Visitor Information**  
+  Modify existing visitor records in case of updates or corrections.
+
+- **Track Visitor Progress**  
+  Monitor who arrived, who they came to meet, purpose of visit, entry time, and leave time.
+
+- **Update Profile**  
+  Edit their personal profile information, including name, contact, and password.
+
+
